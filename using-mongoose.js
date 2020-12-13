@@ -1,6 +1,7 @@
 'use strict';
 
 require('dotenv').config();
+const server = require('./src/server');
 const mongoose = require('mongoose');
 const FoodCollection = require('./models/data-collection-class');
 
@@ -15,7 +16,7 @@ const doDataStuff = async() => {
   let carrot = {
     name: 'Carrot',
     calories: 25,
-    type: 'VEGETABLE'
+    type: 'VEGETABLE',
   };
 
   // save into the collection

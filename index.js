@@ -3,7 +3,7 @@
 require('dotenv').config();
 const server = require('./src/server');
 const mongoose = require('mongoose');
-const FoodCollection = require('./models/food-collection-class');
+const FoodCollection = require('./src/models/food-collection-class');
 
 const food = new FoodCollection();
 
@@ -31,8 +31,8 @@ const doDataStuff = async() => {
   let allFood = await food.get();
   console.log('All Food', allFood);
 
-  // discounnect from Mongo
-  mongoose.disconnect();
+  // disconnect from Mongo
+ 
 };
 server.start(process.env.PORT);
 doDataStuff();

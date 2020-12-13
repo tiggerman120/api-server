@@ -1,6 +1,6 @@
 'use strict';
 
-const model = require('./models/food');
+const model = require('./food-model-class');
 
 class FoodCollection {
   
